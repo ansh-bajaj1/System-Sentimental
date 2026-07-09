@@ -1,0 +1,101 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    font-family: 'Outfit', sans-serif;
+  }
+  
+  code, pre {
+    font-family: 'JetBrains Mono', monospace;
+  }
+}
+
+/* Custom Scrollbar for SRE Cockpit */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(8, 11, 17, 0.5);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(99, 102, 241, 0.2);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(99, 102, 241, 0.4);
+}
+
+/* Glassmorphism Styles */
+.glass-panel {
+  background: rgba(13, 18, 30, 0.7);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+}
+
+.glass-panel-hover {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.glass-panel-hover:hover {
+  border-color: rgba(99, 102, 241, 0.3);
+  box-shadow: 0 12px 40px 0 rgba(99, 102, 241, 0.08);
+  transform: translateY(-2px);
+}
+
+.glass-input {
+  background: rgba(8, 11, 17, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  color: #f1f5f9;
+  transition: all 0.2s;
+}
+
+.glass-input:focus {
+  outline: none;
+  border-color: rgba(99, 102, 241, 0.5);
+  box-shadow: 0 0 0 2px rgba(99, 102, 241, 0.2);
+  background: rgba(8, 11, 17, 0.8);
+}
+
+/* Cyber Glow Accents */
+.cyber-glow-indigo {
+  box-shadow: 0 0 20px 0 rgba(99, 102, 241, 0.15);
+}
+
+.cyber-glow-rose {
+  box-shadow: 0 0 20px 0 rgba(244, 63, 94, 0.15);
+}
+
+.cyber-glow-emerald {
+  box-shadow: 0 0 20px 0 rgba(16, 185, 129, 0.15);
+}
+
+.cyber-glow-amber {
+  box-shadow: 0 0 20px 0 rgba(245, 158, 11, 0.15);
+}
+
+/* Pulse Animation for Live Elements */
+@keyframes cyber-pulse {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.5;
+    transform: scale(0.95);
+  }
+}
+
+.live-indicator {
+  animation: cyber-pulse 2s infinite;
+}
+
+/* Status Gradients */
+.bg-gradient-sre {
+  background: radial-gradient(circle at top right, rgba(99, 102, 241, 0.1), transparent);
+}
